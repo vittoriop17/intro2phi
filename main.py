@@ -15,7 +15,7 @@ def sim_toss(size=1):
 def get_payoff(sequence_length):
     """
     :param sequence_length: represents the number of consecutive tosses without 'cross'
-    :return: the total payoff considering the formula 2^n-1 where n-1 is the length of the sequence
+    :return: the total payoff considering the formula 2^n-1 where n is the length of the sequence
     """
     if sequence_length == 0:
         return 0
