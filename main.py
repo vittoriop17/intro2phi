@@ -22,7 +22,7 @@ def get_payoff(sequence_length):
     return 2 ** (sequence_length - 1)
 
 
-def plot_simulations(all_payoffs, label=''):
+def plot_simulation(all_payoffs, label=''):
     all_avgs = []
     for i in range(1, len(all_payoffs)+1):
         all_avgs.append(np.average(all_payoffs[-i:]))
@@ -49,7 +49,7 @@ def exercise_one():
                 else:
                     all_games_payoff.append(get_payoff(seq_length))
                     break
-        plot_simulations(all_games_payoff, label=f"Sim: {id_sim}")
+        plot_simulation(all_games_payoff, label=f"Sim: {id_sim}")
     plt.savefig("sim.png")
 
 
